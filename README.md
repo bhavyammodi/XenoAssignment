@@ -29,3 +29,5 @@ air_conditioning = on
 discount = 15
 discount = 10
 ```
+
+Compile and run the code using Java Compiler

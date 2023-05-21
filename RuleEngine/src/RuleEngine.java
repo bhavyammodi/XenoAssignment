@@ -18,7 +18,7 @@ public class RuleEngine {
     /*
         If order >= 100 and customer = VIP then discount = 10 else discount = 5
         If temperature > 90 then air_conditioning = on else air_conditioning = off
-           If consumer > 10 then discount = 25 else discount = 15
+        If consumer > 10 then discount = 25 else discount = 15
         If a < 100 and b = vip and c = vvip then abc = nice else abc = good
         Temperature = 95
         consumer = 9

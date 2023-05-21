@@ -4,8 +4,8 @@ import java.util.Map;
 
 public class RulesWithResults {
     // Define two hashmaps to store rules and their corresponding results
-    Map<String, List<Rule>> rules;
-    Map<String, Result> results;
+    Map<String, List<Rule>> rules; // operand, rulesList
+    Map<String, Result> results; // operand, result
 
     public RulesWithResults() {
         this.rules = new HashMap<>();

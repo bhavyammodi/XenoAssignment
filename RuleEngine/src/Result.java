@@ -1,7 +1,7 @@
 public class Result
 {
-    String comp_true;  // if evaluate is true
-    String comp_false; // if evaluate is false
+    private String comp_true;  // if evaluate is true
+    private String comp_false; // if evaluate is false
 
     public String getComp_true() {
         return comp_true;

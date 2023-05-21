@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Evaluate {
-    RulesWithResults rulesWithResults;
+    private RulesWithResults rulesWithResults;
     public void start() {
         rulesWithResults = new RulesWithResults();
         Scanner sc = new Scanner(System.in);
@@ -93,20 +93,20 @@ public class Evaluate {
             }
             List<Rule> ruleList = rulesWithResults.getRule(originalOperand);
             for (Rule r : ruleList) {
-                if (r.operand.equals(operand)) {
-                    if (r.isInt) {
-                        if (r.compare(r.operator, value, r.value)) {
+                if (r.getOperand().equals(operand)) {
+                    if (r.isInt()) {
+                        if (r.compare(r.getOperator(), value, r.getValue())) {
                             numberOfTrueStatements++;
                             if (numberOfTrueStatements >= r.getNumberOfTrueStatements()) {
-                                System.out.println(rulesWithResults.getResult(operand).comp_true);
+                                System.out.println(rulesWithResults.getResult(operand).getComp_true());
                                 return;
                             }
                         }
                     } else {
-                        if (r.comp.equalsIgnoreCase(valueStr)) {
+                        if (r.getComp().equalsIgnoreCase(valueStr)) {
                             numberOfTrueStatements++;
                             if (numberOfTrueStatements >= r.getNumberOfTrueStatements()) {
-                                System.out.println(rulesWithResults.getResult(operand).comp_true);
+                                System.out.println(rulesWithResults.getResult(operand).getComp_true());
                                 return;
                             }
                         }
@@ -116,7 +116,7 @@ public class Evaluate {
             pointer += 3;
         }
         // if code has reached till here, then the result is false:
-        System.out.println(rulesWithResults.getResult(originalOperand).comp_false);
+        System.out.println(rulesWithResults.getResult(originalOperand).getComp_false());
     }
 
 }

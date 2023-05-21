@@ -1,11 +1,11 @@
 public class Rule
 {
-    String operand;  // Example: order, customer
-    String operator; // Example =, >=
-    boolean isInt;   // if the compare value is int
-    String comp;     // if String, to compare
-    int value;       // else value
-    int numberOfTrueStatements;    // count of minimum true statements required
+    private String operand;  // Example: order, customer
+    private String operator; // Example =, >=
+    private boolean isInt;   // if the compare value is int
+    private String comp;     // if String, to compare
+    private int value;       // else value
+    private int numberOfTrueStatements;    // count of minimum true statements required
 
     public String getOperand() {
         return operand;
